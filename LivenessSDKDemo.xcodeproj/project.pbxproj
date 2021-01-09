@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F7783692590D73C0032190A /* AvenirNextLTPro-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F7783672590D6EF0032190A /* AvenirNextLTPro-Demi.otf */; };
+		0F77836A2590D73E0032190A /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F7783682590D6F60032190A /* AvenirNextLTPro-Regular.otf */; };
+		EF5B69122264583A007DBA3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5B69112264583A007DBA3B /* AppDelegate.m */; };
+		EF5B69152264583A007DBA3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5B69142264583A007DBA3B /* ViewController.m */; };
+		EF5B69182264583A007DBA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5B69162264583A007DBA3B /* Main.storyboard */; };
+		EF5B691A2264583D007DBA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5B69192264583D007DBA3B /* Assets.xcassets */; };
+		EF5B691D2264583D007DBA3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5B691B2264583D007DBA3B /* LaunchScreen.storyboard */; };
+		EF5B69202264583D007DBA3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5B691F2264583D007DBA3B /* main.m */; };
+		EF5B6936226458A3007DBA3B /* AAIImgs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF5B6929226458A3007DBA3B /* AAIImgs.bundle */; };
+		EF5B6937226458A3007DBA3B /* AAIAudio.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF5B692A226458A3007DBA3B /* AAIAudio.bundle */; };
+		EF5B6938226458A3007DBA3B /* AAILanguageString.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF5B692B226458A3007DBA3B /* AAILanguageString.bundle */; };
+		EF5B6939226458A3007DBA3B /* AAILivenessUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5B6931226458A3007DBA3B /* AAILivenessUtil.m */; };
+		EF5B693A226458A3007DBA3B /* AAIHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5B6932226458A3007DBA3B /* AAIHUD.m */; };
+		EF5B693B226458A3007DBA3B /* AAILivenessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5B6933226458A3007DBA3B /* AAILivenessViewController.m */; };
+		EF5B693C226458A3007DBA3B /* AAILivenessResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5B6934226458A3007DBA3B /* AAILivenessResultViewController.m */; };
+		EF5B693D226458C4007DBA3B /* AAILivenessSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B6927226458A3007DBA3B /* AAILivenessSDK.framework */; };
+		EF5B693E226458C4007DBA3B /* AAILivenessSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B6927226458A3007DBA3B /* AAILivenessSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF5B6942226458D4007DBA3B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B6941226458D4007DBA3B /* libc++.tbd */; };
+		EF5B6944226458DC007DBA3B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B6943226458DC007DBA3B /* AVFoundation.framework */; };
+		EF5B6946226458E7007DBA3B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B6945226458E7007DBA3B /* CoreMotion.framework */; };
+		EF5B6948226458EF007DBA3B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B6947226458EF007DBA3B /* SystemConfiguration.framework */; };
+		EF5B694A226458F7007DBA3B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B6949226458F7007DBA3B /* CoreTelephony.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF5B693F226458C4007DBA3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF5B693E226458C4007DBA3B /* AAILivenessSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F7783672590D6EF0032190A /* AvenirNextLTPro-Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Demi.otf"; sourceTree = "<group>"; };
+		0F7783682590D6F60032190A /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
+		EF5B690D2264583A007DBA3B /* LivenessSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivenessSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5B69102264583A007DBA3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF5B69112264583A007DBA3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF5B69132264583A007DBA3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF5B69142264583A007DBA3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF5B69172264583A007DBA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF5B69192264583D007DBA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF5B691C2264583D007DBA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF5B691E2264583D007DBA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5B691F2264583D007DBA3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF5B6927226458A3007DBA3B /* AAILivenessSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AAILivenessSDK.framework; sourceTree = "<group>"; };
+		EF5B6929226458A3007DBA3B /* AAIImgs.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AAIImgs.bundle; sourceTree = "<group>"; };
+		EF5B692A226458A3007DBA3B /* AAIAudio.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AAIAudio.bundle; sourceTree = "<group>"; };
+		EF5B692B226458A3007DBA3B /* AAILanguageString.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AAILanguageString.bundle; sourceTree = "<group>"; };
+		EF5B692D226458A3007DBA3B /* AAILivenessUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAILivenessUtil.h; sourceTree = "<group>"; };
+		EF5B692E226458A3007DBA3B /* AAILivenessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAILivenessViewController.h; sourceTree = "<group>"; };
+		EF5B692F226458A3007DBA3B /* AAIHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAIHUD.h; sourceTree = "<group>"; };
+		EF5B6930226458A3007DBA3B /* AAILivenessResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAILivenessResultViewController.h; sourceTree = "<group>"; };
+		EF5B6931226458A3007DBA3B /* AAILivenessUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAILivenessUtil.m; sourceTree = "<group>"; };
+		EF5B6932226458A3007DBA3B /* AAIHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAIHUD.m; sourceTree = "<group>"; };
+		EF5B6933226458A3007DBA3B /* AAILivenessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAILivenessViewController.m; sourceTree = "<group>"; };
+		EF5B6934226458A3007DBA3B /* AAILivenessResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAILivenessResultViewController.m; sourceTree = "<group>"; };
+		EF5B6941226458D4007DBA3B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		EF5B6943226458DC007DBA3B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EF5B6945226458E7007DBA3B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EF5B6947226458EF007DBA3B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EF5B6949226458F7007DBA3B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF5B690A2264583A007DBA3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5B694A226458F7007DBA3B /* CoreTelephony.framework in Frameworks */,
+				EF5B6948226458EF007DBA3B /* SystemConfiguration.framework in Frameworks */,
+				EF5B6946226458E7007DBA3B /* CoreMotion.framework in Frameworks */,
+				EF5B6944226458DC007DBA3B /* AVFoundation.framework in Frameworks */,
+				EF5B6942226458D4007DBA3B /* libc++.tbd in Frameworks */,
+				EF5B693D226458C4007DBA3B /* AAILivenessSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F7783662590D61B0032190A /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F7783672590D6EF0032190A /* AvenirNextLTPro-Demi.otf */,
+				0F7783682590D6F60032190A /* AvenirNextLTPro-Regular.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		EF5B69042264583A007DBA3B = {
+			isa = PBXGroup;
+			children = (
+				EF5B690F2264583A007DBA3B /* LivenessSDKDemo */,
+				EF5B690E2264583A007DBA3B /* Products */,
+				EF5B6940226458D4007DBA3B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF5B690E2264583A007DBA3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF5B690D2264583A007DBA3B /* LivenessSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF5B690F2264583A007DBA3B /* LivenessSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0F7783662590D61B0032190A /* fonts */,
+				EF5B6926226458A3007DBA3B /* AAILivenessSDK */,
+				EF5B69102264583A007DBA3B /* AppDelegate.h */,
+				EF5B69112264583A007DBA3B /* AppDelegate.m */,
+				EF5B69132264583A007DBA3B /* ViewController.h */,
+				EF5B69142264583A007DBA3B /* ViewController.m */,
+				EF5B69162264583A007DBA3B /* Main.storyboard */,
+				EF5B69192264583D007DBA3B /* Assets.xcassets */,
+				EF5B691B2264583D007DBA3B /* LaunchScreen.storyboard */,
+				EF5B691E2264583D007DBA3B /* Info.plist */,
+				EF5B691F2264583D007DBA3B /* main.m */,
+			);
+			path = LivenessSDKDemo;
+			sourceTree = "<group>";
+		};
+		EF5B6926226458A3007DBA3B /* AAILivenessSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EF5B6927226458A3007DBA3B /* AAILivenessSDK.framework */,
+				EF5B6928226458A3007DBA3B /* Resource */,
+				EF5B692C226458A3007DBA3B /* AAILiveness */,
+			);
+			path = AAILivenessSDK;
+			sourceTree = "<group>";
+		};
+		EF5B6928226458A3007DBA3B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EF5B6929226458A3007DBA3B /* AAIImgs.bundle */,
+				EF5B692A226458A3007DBA3B /* AAIAudio.bundle */,
+				EF5B692B226458A3007DBA3B /* AAILanguageString.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EF5B692C226458A3007DBA3B /* AAILiveness */ = {
+			isa = PBXGroup;
+			children = (
+				EF5B692F226458A3007DBA3B /* AAIHUD.h */,
+				EF5B6932226458A3007DBA3B /* AAIHUD.m */,
+				EF5B6930226458A3007DBA3B /* AAILivenessResultViewController.h */,
+				EF5B6934226458A3007DBA3B /* AAILivenessResultViewController.m */,
+				EF5B692D226458A3007DBA3B /* AAILivenessUtil.h */,
+				EF5B6931226458A3007DBA3B /* AAILivenessUtil.m */,
+				EF5B692E226458A3007DBA3B /* AAILivenessViewController.h */,
+				EF5B6933226458A3007DBA3B /* AAILivenessViewController.m */,
+			);
+			path = AAILiveness;
+			sourceTree = "<group>";
+		};
+		EF5B6940226458D4007DBA3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF5B6949226458F7007DBA3B /* CoreTelephony.framework */,
+				EF5B6947226458EF007DBA3B /* SystemConfiguration.framework */,
+				EF5B6945226458E7007DBA3B /* CoreMotion.framework */,
+				EF5B6943226458DC007DBA3B /* AVFoundation.framework */,
+				EF5B6941226458D4007DBA3B /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF5B690C2264583A007DBA3B /* LivenessSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5B69232264583D007DBA3B /* Build configuration list for PBXNativeTarget "LivenessSDKDemo" */;
+			buildPhases = (
+				EF5B69092264583A007DBA3B /* Sources */,
+				EF5B690A2264583A007DBA3B /* Frameworks */,
+				EF5B690B2264583A007DBA3B /* Resources */,
+				EF5B693F226458C4007DBA3B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LivenessSDKDemo;
+			productName = LivenessSDKDemo;
+			productReference = EF5B690D2264583A007DBA3B /* LivenessSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF5B69052264583A007DBA3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Liveness.AI.Advance;
+				TargetAttributes = {
+					EF5B690C2264583A007DBA3B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = EF5B69082264583A007DBA3B /* Build configuration list for PBXProject "LivenessSDKDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF5B69042264583A007DBA3B;
+			productRefGroup = EF5B690E2264583A007DBA3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF5B690C2264583A007DBA3B /* LivenessSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF5B690B2264583A007DBA3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5B691D2264583D007DBA3B /* LaunchScreen.storyboard in Resources */,
+				EF5B6936226458A3007DBA3B /* AAIImgs.bundle in Resources */,
+				EF5B691A2264583D007DBA3B /* Assets.xcassets in Resources */,
+				0F7783692590D73C0032190A /* AvenirNextLTPro-Demi.otf in Resources */,
+				EF5B69182264583A007DBA3B /* Main.storyboard in Resources */,
+				EF5B6938226458A3007DBA3B /* AAILanguageString.bundle in Resources */,
+				0F77836A2590D73E0032190A /* AvenirNextLTPro-Regular.otf in Resources */,
+				EF5B6937226458A3007DBA3B /* AAIAudio.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF5B69092264583A007DBA3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5B693C226458A3007DBA3B /* AAILivenessResultViewController.m in Sources */,
+				EF5B693A226458A3007DBA3B /* AAIHUD.m in Sources */,
+				EF5B69152264583A007DBA3B /* ViewController.m in Sources */,
+				EF5B69202264583D007DBA3B /* main.m in Sources */,
+				EF5B6939226458A3007DBA3B /* AAILivenessUtil.m in Sources */,
+				EF5B69122264583A007DBA3B /* AppDelegate.m in Sources */,
+				EF5B693B226458A3007DBA3B /* AAILivenessViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF5B69162264583A007DBA3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5B69172264583A007DBA3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF5B691B2264583D007DBA3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5B691C2264583D007DBA3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF5B69212264583D007DBA3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF5B69222264583D007DBA3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF5B69242264583D007DBA3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64A3X3G6UP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LivenessSDKDemo/AAILivenessSDK",
+				);
+				INFOPLIST_FILE = LivenessSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zfq.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EF5B69252264583D007DBA3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64A3X3G6UP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LivenessSDKDemo/AAILivenessSDK",
+				);
+				INFOPLIST_FILE = LivenessSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zfq.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF5B69082264583A007DBA3B /* Build configuration list for PBXProject "LivenessSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5B69212264583D007DBA3B /* Debug */,
+				EF5B69222264583D007DBA3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5B69232264583D007DBA3B /* Build configuration list for PBXNativeTarget "LivenessSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5B69242264583D007DBA3B /* Debug */,
+				EF5B69252264583D007DBA3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF5B69052264583A007DBA3B /* Project object */;
+}
