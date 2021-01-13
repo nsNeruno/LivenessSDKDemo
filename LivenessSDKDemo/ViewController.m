@@ -44,6 +44,12 @@
 
 - (void)onDetectionFailed:(AAIDetectionResult)detectionResult forDetectionType:(AAIDetectionType)detectionType {
     // TODO: Handle Failed Detection Result
+    
+}
+
+- (void)onAuthError:(NSError *)error {
+    // TODO: Handle the error
+    NSLog(@"Auth Error: %@", error.description);
 }
 
 @end
