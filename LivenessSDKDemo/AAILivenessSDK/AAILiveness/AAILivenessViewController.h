@@ -16,13 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 - (void)onDetectionFailed:(AAIDetectionResult)detectionResult forDetectionType:(AAIDetectionType)detectionType;
 - (void)onDetectionComplete:(NSDictionary *)resultInfo;
+- (void)onAuthError:(NSError * _Nonnull) error;
 @optional
 - (void)livenessView:(AAILivenessWrapView *)param endRequest:(NSError * _Nullable)error;
-- (void)onAuthError:(NSError * _Nonnull) error;
 @end
 
 @interface AAILivenessViewController : UIViewController
-@property(nonatomic, readwrite) id<AAILivenessResultDelegate> _Nullable resultDelegate;
+@property(nonatomic, readwrite, retain) id<AAILivenessResultDelegate> _Nullable resultDelegate;
 @end
 
 NS_ASSUME_NONNULL_END
