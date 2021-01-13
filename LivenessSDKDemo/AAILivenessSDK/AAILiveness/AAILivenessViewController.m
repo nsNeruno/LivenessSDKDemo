@@ -222,7 +222,8 @@
     
     //Back button
     if (_backBtn) {
-        _backBtn.frame = CGRectMake(14.0, top + marginTop, 40, 40);
+//        _backBtn.frame = CGRectMake(12.0, top + marginTop, 40, 40);
+        _backBtn.frame = CGRectMake(_roundViewFrame.origin.x - 4.0, top + marginTop, [_backBtn sizeThatFits:CGSizeMake(40, 40)].width, 40);
         
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.text = @"Liveness Detection";
@@ -408,11 +409,19 @@
                 
                 [AAIHUD dismissHUDOnView:strongSelf.view afterDelay:0];
                 
-                [weakSelf.navigationController dismissViewControllerAnimated:YES completion:^{
-                    if (self.resultDelegate) {
-                        [self.resultDelegate onAuthError:error];
+                UINavigationController *navc = self.navigationController;
+                if (navc && [navc.viewControllers containsObject:self]) {
+                    [navc popViewControllerAnimated:YES];
+                    if (strongSelf.resultDelegate) {
+                        [strongSelf.resultDelegate onAuthError:error];
                     }
-                }];
+                } else {
+                    [navc.presentingViewController dismissViewControllerAnimated:YES completion:^{
+                        if (strongSelf.resultDelegate) {
+                            [strongSelf.resultDelegate onAuthError:error];
+                        }
+                    }];
+                }
 //                AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:error.localizedDescription];
 //                [weakSelf.navigationController pushViewController:resultVC animated:YES];
             } else {
@@ -571,11 +580,24 @@
         
 //        [_stateImgView stopAnimating];
         
-        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        UINavigationController *navc = self.navigationController;
+        if (navc && [navc.viewControllers containsObject:self]) {
+            [self.navigationController popViewControllerAnimated:YES];
             if (self.resultDelegate) {
                 [self.resultDelegate onDetectionFailed:detectionResult forDetectionType:detectionType];
             }
-        }];
+        } else {
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+                if (self.resultDelegate) {
+                    [self.resultDelegate onDetectionFailed:detectionResult forDetectionType:detectionType];
+                }
+            }];
+        }
+//        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+//            if (self.resultDelegate) {
+//                [self.resultDelegate onDetectionFailed:detectionResult forDetectionType:detectionType];
+//            }
+//        }];
 //        AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:key];
 //        [self.navigationController pushViewController:resultVC animated:YES];
     }
@@ -714,11 +736,28 @@
     
     //Show result page
 //    AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResultInfo:resultInfo];
-    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+    UINavigationController *navc = self.navigationController;
+    if (navc && [navc.viewControllers containsObject:self]) {
+        [self.navigationController popViewControllerAnimated:YES];
         if (self.resultDelegate) {
-            [self.resultDelegate onDetectionComplete:resultInfo];
+            if (self.resultDelegate) {
+                [self.resultDelegate onDetectionComplete:resultInfo];
+            }
         }
-    }];
+    } else {
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+            if (self.resultDelegate) {
+                if (self.resultDelegate) {
+                    [self.resultDelegate onDetectionComplete:resultInfo];
+                }
+            }
+        }];
+    }
+//    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+//        if (self.resultDelegate) {
+//            [self.resultDelegate onDetectionComplete:resultInfo];
+//        }
+//    }];
 //    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
@@ -744,11 +783,19 @@
     [AAIHUD dismissHUDOnView:self.view afterDelay:0];
     
     if (error) {
-        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        UINavigationController *navc = self.navigationController;
+        if (navc && [navc.viewControllers containsObject:self]) {
+            [self.navigationController popViewControllerAnimated:YES];
             if (self.resultDelegate) {
                 [self.resultDelegate livenessView:param endRequest:error];
             }
-        }];
+        } else {
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+                if (self.resultDelegate) {
+                    [self.resultDelegate livenessView:param endRequest:error];
+                }
+            }];
+        }
 //        AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:error.localizedDescription];
 //        [self.navigationController pushViewController:resultVC animated:YES];
     }
