@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "AAILivenessSDK/AAILiveness/AAILivenessViewController.h"
 #import <AAILivenessSDK/AAILivenessSDK.h>
-@interface ViewController ()
+@interface ViewController ()<AAILivenessResultDelegate>
 
 @end
 
@@ -31,7 +31,19 @@
 - (void)tapSDKBtnAction
 {
     AAILivenessViewController *vc = [[AAILivenessViewController alloc] init];
+    vc.resultDelegate = self;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)onDetectionComplete:(nonnull NSDictionary *)resultInfo {
+    // TODO: Handle Detection Result
+    for (NSString *key in resultInfo) {
+        NSLog(@"resultInfo[%@]: %@", key, resultInfo[key]);
+    }
+}
+
+- (void)onDetectionFailed:(AAIDetectionResult)detectionResult forDetectionType:(AAIDetectionType)detectionType {
+    // TODO: Handle Failed Detection Result
 }
 
 @end

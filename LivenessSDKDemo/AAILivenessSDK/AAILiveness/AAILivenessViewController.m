@@ -49,7 +49,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     _preResult = AAIDetectionResultUnknown;
     _isReady = NO;
     _isRequestingAuth = NO;
@@ -408,8 +407,14 @@
                 strongSelf.requestAuthSucceed = NO;
                 
                 [AAIHUD dismissHUDOnView:strongSelf.view afterDelay:0];
-                AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:error.localizedDescription];
-                [weakSelf.navigationController pushViewController:resultVC animated:YES];
+                
+                [weakSelf.navigationController dismissViewControllerAnimated:YES completion:^{
+                    if (self.resultDelegate) {
+                        [self.resultDelegate onAuthError:error];
+                    }
+                }];
+//                AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:error.localizedDescription];
+//                [weakSelf.navigationController pushViewController:resultVC animated:YES];
             } else {
                 strongSelf.requestAuthCached = YES;
                 strongSelf.requestAuthSucceed = YES;
@@ -566,8 +571,13 @@
         
 //        [_stateImgView stopAnimating];
         
-        AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:key];
-        [self.navigationController pushViewController:resultVC animated:YES];
+        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+            if (self.resultDelegate) {
+                [self.resultDelegate onDetectionFailed:detectionResult forDetectionType:detectionType];
+            }
+        }];
+//        AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:key];
+//        [self.navigationController pushViewController:resultVC animated:YES];
     }
 }
 
@@ -703,8 +713,13 @@
      */
     
     //Show result page
-    AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResultInfo:resultInfo];
-    [self.navigationController pushViewController:resultVC animated:YES];
+//    AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResultInfo:resultInfo];
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        if (self.resultDelegate) {
+            [self.resultDelegate onDetectionComplete:resultInfo];
+        }
+    }];
+//    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 - (void)onDetectionRemainingTime:(NSTimeInterval)remainingTime forDetectionType:(AAIDetectionType)detectionType
@@ -729,8 +744,13 @@
     [AAIHUD dismissHUDOnView:self.view afterDelay:0];
     
     if (error) {
-        AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:error.localizedDescription];
-        [self.navigationController pushViewController:resultVC animated:YES];
+        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+            if (self.resultDelegate) {
+                [self.resultDelegate livenessView:param endRequest:error];
+            }
+        }];
+//        AAILivenessResultViewController *resultVC = [[AAILivenessResultViewController alloc] initWithResult:NO resultState:error.localizedDescription];
+//        [self.navigationController pushViewController:resultVC animated:YES];
     }
 }
 
