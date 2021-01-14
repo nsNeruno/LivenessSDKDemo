@@ -223,7 +223,7 @@
     //Back button
     if (_backBtn) {
 //        _backBtn.frame = CGRectMake(12.0, top + marginTop, 40, 40);
-        _backBtn.frame = CGRectMake(_roundViewFrame.origin.x - 4.0, top + marginTop, [_backBtn sizeThatFits:CGSizeMake(40, 40)].width, 40);
+        _backBtn.frame = CGRectMake(_roundViewFrame.origin.x - 3.0, top + marginTop, [_backBtn sizeThatFits:CGSizeMake(40, 40)].width, 40);
         
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.text = @"Liveness Detection";
