@@ -584,12 +584,12 @@
         if (navc && [navc.viewControllers containsObject:self]) {
             [self.navigationController popViewControllerAnimated:YES];
             if (self.resultDelegate) {
-                [self.resultDelegate onDetectionFailed:detectionResult forDetectionType:detectionType];
+                [self.resultDelegate onDetectionFailed:detectionResult reason:state forDetectionType:detectionType];
             }
         } else {
             [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
                 if (self.resultDelegate) {
-                    [self.resultDelegate onDetectionFailed:detectionResult forDetectionType:detectionType];
+                    [self.resultDelegate onDetectionFailed:detectionResult reason:state forDetectionType:detectionType];
                 }
             }];
         }
